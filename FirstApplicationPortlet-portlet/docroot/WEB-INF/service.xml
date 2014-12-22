@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.liferay">
+	<author>JavaBoss</author>
+	<namespace>TestApp</namespace>
+
+	<entity name="Student" table="student" local-service="true" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+		<column name="studentId" type="long" primary="true" id-type="increment"/>
+		
+		<column name="firstName" type="String" />
+		<column name="lastName" type="String" />
+		<column name="studentAge" type="int" />
+		<column name="studentGender" type="int" />
+		<column name="studentAddress" type="String" />
+		<column name="hobies" type="String" />
+		<!-- Order -->
+        <column name="phoneNo" type="long"></column>
+		<order by="asc">
+			<order-column name="studentId" />
+		</order>
+		<!-- Finder methods -->
+		<finder name="ByGender" return-type="Collection">
+			<finder-column name="studentGender"/>
+		</finder>
+		<finder name="FirstName" return-type="Collection">
+			<finder-column name="firstName" comparator="LIKE"/>
+		</finder>
+		<finder name="FirstNameAndGender" return-type="Collection">
+			<finder-column name="firstName" arrayable-operator="AND" comparator="LIKE"/>
+			<finder-column name="studentGender" comparator="="/>
+		</finder>
+		
+	</entity>
+</service-builder>

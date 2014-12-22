@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.liferay.model.Student" />
+	<class name="com.liferay.model.impl.StudentImpl" table="student">
+		<cache usage="read-write" />
+		<id name="studentId" type="long">
+			<generator class="increment" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="firstName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="studentAge" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="studentGender" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="studentAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hobies" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="phoneNo" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>
