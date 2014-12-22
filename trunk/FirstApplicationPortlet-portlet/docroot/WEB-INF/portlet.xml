@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" 
+	version="2.0">
+	<portlet>
+		<portlet-name>12345</portlet-name>
+		<display-name>FirstApplicationPortlet</display-name>
+		<portlet-class>com.liferay.TestPortlet</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/sub/view.jsp</value>
+		</init-param>
+		<init-param>
+       <name>add-process-action-success-action</name>
+        <value>false</value> 
+</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>FirstApplicationPortlet</title>
+			<short-title>FirstApplicationPortlet</short-title>
+			<keywords>FirstApplicationPortlet</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+			<supported-processing-event>
+			<qname xmlns:x='http://liferay.com'>x:editEvent</qname>
+		</supported-processing-event>
+	</portlet>
+	<portlet>
+		<portlet-name>123456</portlet-name>
+		<display-name>FirstApplicationPortlet2</display-name>
+		<portlet-class>com.liferay.TestPortletTwo</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/pub/view.jsp</value>
+		</init-param>
+		<init-param>
+       <name>add-process-action-success-action</name>
+        <value>false</value> 
+</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>FirstApplicationPortletTwo</title>
+			<short-title>FirstApplicationPortletTwo</short-title>
+			<keywords>FirstApplicationPortletTwo</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-publishing-event>
+			
+			<qname xmlns:x='http://liferay.com'>x:editEvent</qname>
+			
+		</supported-publishing-event>
+	</portlet>
+	<portlet>
+		<portlet-name>new</portlet-name>
+		<display-name>New</display-name>
+		<portlet-class>com.test.NewPortlet</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/new/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>New</title>
+			<short-title>New</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	 <!-- event from bookDetail from bookList -->	
+	<event-definition xmlns:x='http://liferay.com'>
+		 <qname xmlns:x='http://liferay.com'>x:editEvent</qname>
+		 <value-type>java.lang.String</value-type>
+		 </event-definition>
+		 
+</portlet-app>

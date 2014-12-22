@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.model.Student">
+		<field name="uuid" type="String" />
+		<field name="studentId" type="long" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="studentAge" type="int" />
+		<field name="studentGender" type="int" />
+		<field name="studentAddress" type="String" />
+		<field name="hobies" type="String" />
+		<field name="phoneNo" type="long" />
+	</model>
+</model-hints>
