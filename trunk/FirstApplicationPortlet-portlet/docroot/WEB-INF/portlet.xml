@@ -80,37 +80,7 @@
 			
 		</supported-publishing-event>
 	</portlet>
-	<portlet>
-		<portlet-name>new</portlet-name>
-		<display-name>New</display-name>
-		<portlet-class>com.test.NewPortlet</portlet-class>
-		<init-param>
-			<name>view-template</name>
-			<value>/html/new/view.jsp</value>
-		</init-param>
-		<expiration-cache>0</expiration-cache>
-		<supports>
-			<mime-type>text/html</mime-type>
-			<portlet-mode>view</portlet-mode>
-		</supports>
-		<portlet-info>
-			<title>New</title>
-			<short-title>New</short-title>
-			<keywords></keywords>
-		</portlet-info>
-		<security-role-ref>
-			<role-name>administrator</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>guest</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>power-user</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>user</role-name>
-		</security-role-ref>
-	</portlet>
+	
 	 <!-- event from bookDetail from bookList -->	
 	<event-definition xmlns:x='http://liferay.com'>
 		 <qname xmlns:x='http://liferay.com'>x:editEvent</qname>
