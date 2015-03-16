@@ -1,0 +1,1 @@
+liferay 6.2, Struts, IPC, liferay Search container, search, service builder concept included
